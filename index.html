@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGadgets - Your Premium Electronics Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Custom CSS -->
+     <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white shadow-sm">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="logo">TechGadgets</a>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="product-listing.html">Products</a></li>
+                            <li class="nav-item"><a class="nav-link" href="product-detail.html">Categories</a></li>
+                            <li class="nav-item"><a class="nav-link" href="cart.html"><i class='bx bx-cart'></i> Cart <span id="cart-count" class="badge badge-light">0</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Section -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-12">
+                <div class="d-flex justify-content-between">
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3" style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="#"> Free Shipping on Orders Over $50</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="#"> Holiday Sale: Up to 40% Off Select Items</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="#"> New Arrivals: Cutting-Edge Tech Gadgets</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="#"> Member Exclusive: Extra 10% Off</a></div>
+                    </div>
+                    <!-- Custom Navigation Buttons -->
+                    <div class="carousel-controls">
+                        <button class="carousel-prev btn btn-primary ml-2">Prev</button>
+                        <button class="carousel-next btn btn-primary ml-2">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Start -->
+       
+    <div class="container-fluid py-3 bg-primary"> 
+        <p>Featured Products</p>
+        <div class="container position-relative">
+            <div class="owl-carousel owl-carousel-2 carousel-item-3">
+                <div class="item">
+                    <img src="imgs/product1.jpg" alt="Latest Smartphone" style="width: 80px; height: 80px; object-fit: contain;"  >
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="product-listing.html" target="_blank">TechMaster Pro Phone - $899.99</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imgs/product7.jpg" alt="Wireless Earbuds" style="width: 80px; height: 80px; object-fit: contain;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="product-listing.html" target="_blank">Noise-Canceling Wireless Earbuds - $199.99</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imgs/product3.jpg" alt="Smart Watch" style="width: 80px; height: 80px; object-fit: contain;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="product-listing.html" target="_blank">Health Monitoring Smart Watch - $249.99</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imgs/product4.jpg" alt="Laptop" style="width: 80px; height: 80px; object-fit: contain;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="product-listing.html" target="_blank">Ultra-Screen Earbuds - $179.99</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Custom Navigation Buttons for Top News Slider -->
+            <div class="top-news-carousel-controls">
+                <button class="top-news-prev btn">Prev</button>
+                <button class="top-news-next btn">Next</button>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Featured Products Slider with Categories -->
+
+<div class="container-fluid py-3" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row g-3">
+            <!-- Main Slider Column - Reduced size -->
+            <div class="col-lg-8">
+                <div class="owl-carousel featured-carousel owl-theme">
+                    <!-- Slide 1 -->
+                    <div class="featured-slide position-relative rounded-2 overflow-hidden">
+                        <img class="img-fluid w-100" src="imgs/featured-product1.jpg" alt="Latest Smartphone" style="height: 320px; object-fit: contain;">
+                        <div class="featured-overlay d-flex flex-column justify-content-end p-3">
+                            <div class="product-meta mb-1">
+                                <span class="badge bg-primary me-1">New</span>
+                                <span class="text-white-50 small">Smartphones</span>
+                            </div>
+                            <h3 class="text-white mb-2 fs-4">A Pro Smartphone - Revolutionary Camera</h3>
+                            <div class="d-flex align-items-center">
+                                <a href="product-listing.html" class="btn btn-sm btn-primary me-2">Shop Now</a>
+                                <span class="text-white small">From $799</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="featured-slide position-relative rounded-2 overflow-hidden">
+                        <img class="img-fluid w-100" src="imgs/featured-product2.jpg" alt="Premium Laptop" style="height: 320px; object-fit: contain;">
+                        <div class="featured-overlay d-flex flex-column justify-content-end p-3">
+                            <div class="product-meta mb-1">
+                                <span class="badge bg-danger me-1">Sale</span>
+                                <span class="text-white-50 small">Laptops</span>
+                            </div>
+                            <h3 class="text-white mb-2 fs-4">Ultrabook Pro - 40% Off</h3>
+                            <div class="d-flex align-items-center">
+                                <a href="product-listing.html" class="btn btn-sm btn-primary me-2">Shop Now</a>
+                                <span class="text-white small"><s class="text-danger">$1299</s> $779</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="featured-slide position-relative rounded-2 overflow-hidden">
+                        <img class="img-fluid w-100" src="imgs/featured-product3.jpg" alt="Smart Home Bundle" style="height: 320px; object-fit: contain;">
+                        <div class="featured-overlay d-flex flex-column justify-content-end p-3">
+                            <div class="product-meta mb-1">
+                                <span class="badge bg-success me-1">Bundle</span>
+                                <span class="text-white-50 small">Smart Home</span>
+                            </div>
+                            <h3 class="text-white mb-2 fs-4">Smart Home Kit - Save $200</h3>
+                            <div class="d-flex align-items-center">
+                                <a href="product-listing.html" class="btn btn-sm btn-primary me-2">Shop Now</a>
+                                <span class="text-white small">Only $599</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="featured-slide position-relative rounded-2 overflow-hidden">
+                        <img class="img-fluid w-100" src="imgs/featured-product4.jpg" alt="Smart Home Bundle" style="height: 320px; object-fit: contain;">
+                        <div class="featured-overlay d-flex flex-column justify-content-end p-3">
+                            <div class="product-meta mb-1">
+                                <span class="badge bg-success me-1">Bundle</span>
+                                <span class="text-white-50 small">Speakers</span>
+                            </div>
+                            <h3 class="text-white mb-2 fs-4">Speaker Kit - Save $100</h3>
+                            <div class="d-flex align-items-center">
+                                <a href="product-listing.html" class="btn btn-sm btn-primary me-2">Shop Now</a>
+                                <span class="text-white small">Only $599</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Categories Column - Compact version -->
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center justify-content-between bg-white p-2 rounded-top shadow-sm">
+                    <h3 class="m-0 fs-5 fw-bold">Shop Categories</h3>
+                    <a class="text-primary small fw-medium text-decoration-none" href="product-listing.html">View All</a>
+                </div>
+                
+                <div class="category-grid bg-white p-2 rounded-bottom shadow-sm">
+                    <!-- Category 1 -->
+                    <a href="product-listing.html?category=smartphones" class="category-card d-flex align-items-center mb-2 p-2 rounded-2 text-decoration-none">
+                        <div class="category-img me-2" style="width: 50px; height: 50px;">
+                            <img class="img-fluid h-100 w-100 rounded-1" src="imgs/SmartScreens.jpg" alt="Smart Screens" style="object-fit: contain;">
+                        </div>
+                        <div class="category-info">
+                            <h5 class="mb-0 fs-6">Smart Screens</h5>
+                            <p class="mb-0 text-muted small">32 products</p>
+                        </div>
+                        <i class="fas fa-chevron-right ms-auto text-muted small"></i>
+                    </a>
+                    
+                    <!-- Category 2 -->
+                    <a href="product-listing.html?category=laptops" class="category-card d-flex align-items-center mb-2 p-2 rounded-2 text-decoration-none">
+                        <div class="category-img me-2" style="width: 50px; height: 50px;">
+                            <img class="img-fluid h-100 w-100 rounded-1" src="imgs/WirelessDevices.jpg" alt="Wireless Devices" style="object-fit: contain;">
+                        </div>
+                        <div class="category-info">
+                            <h5 class="mb-0 fs-6">Wireless Devices</h5>
+                            <p class="mb-0 text-muted small">28 products</p>
+                        </div>
+                        <i class="fas fa-chevron-right ms-auto text-muted small"></i>
+                    </a>
+                    
+                    <!-- Category 3 -->
+                    <a href="product-listing.html?category=audio" class="category-card d-flex align-items-center mb-2 p-2 rounded-2 text-decoration-none">
+                        <div class="category-img me-2" style="width: 50px; height: 50px;">
+                            <img class="img-fluid h-100 w-100 rounded-1" src="imgs/AudioDevices.png" alt="Audio Devices" style="object-fit: contain;">
+                        </div>
+                        <div class="category-info">
+                            <h5 class="mb-0 fs-6">Audio Devices</h5>
+                            <p class="mb-0 text-muted small">45 products</p>
+                        </div>
+                        <i class="fas fa-chevron-right ms-auto text-muted small"></i>
+                    </a>
+                    
+                    <!-- Category 4 -->
+                    <a href="product-listing.html?category=smart-home" class="category-card d-flex align-items-center p-2 rounded-2 text-decoration-none">
+                        <div class="category-img me-2" style="width: 50px; height: 50px;">
+                            <img class="img-fluid h-100 w-100 rounded-1" src="imgs/SmartHome.jpg" alt="Smart Home" style="object-fit: contain;">
+                        </div>
+                        <div class="category-info">
+                            <h5 class="mb-0 fs-6">Smart Home</h5>
+                            <p class="mb-0 text-muted small">19 products</p>
+                        </div>
+                        <i class="fas fa-chevron-right ms-auto text-muted small"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+    <!-- Products Section -->
+    <section class="video-gallery">
+        <h1>Best Selling Products</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 vid-container">
+                    <div class="product-card">
+                        <img src="imgs/smartphone.jpg" alt="Premium Smartphone" class="img-fluid">
+                        <h3>Premium Smartphone</h3>
+                        <p class="price">$799.99 <span class="old-price">$899.99</span></p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4 vid-container">
+                    <div class="product-card">
+                        <img src="imgs/laptop.jpg" alt="Ultrabook Laptop" class="img-fluid">
+                        <h3>Ultrabook Laptop</h3>
+                        <p class="price">$1200 <span class="old-price">$1500</span></p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4 vid-container">
+                    <div class="product-card">
+                        <img src="imgs/headphones.jpg" alt="Wireless Headphones" class="img-fluid">
+                        <h3>Wireless Headphones</h3>
+                        <p class="price">$179.99 <span class="old-price">$229.99</span></p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4 vid-container">
+                    <div class="product-card">
+                        <img src="imgs/smartwatch.jpg" alt="Smart Watch" class="img-fluid">
+                        <h3>Smart Watch</h3>
+                        <p class="price">$199.99 <span class="old-price">$249.99</span></p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4 vid-container">
+                    <div class="product-card">
+                        <img src="imgs/tablet.jpg" alt="Tablet" class="img-fluid">
+                        <h3>Premium Tablet</h3>
+                        <p class="price">$499.99 <span class="old-price">$599.99</span></p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4 vid-container">
+                    <div class="product-card">
+                        <img src="imgs/speaker.jpg" alt="Smart Speaker" class="img-fluid">
+                        <h3>Smart Speaker</h3>
+                        <p class="price">$129.99 <span class="old-price">$159.99</span></p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter bg-light py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest deals and product updates</p>
+                </div>
+                <div class="col-md-6">
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-decoration circle"></div>
+    <div class="footer-decoration square"></div>
+    
+    <div class="container footer-container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 footer-column">
+                <div class="footer-logo">Tech<span>Gadgets</span></div>
+                <p>Your one-stop shop for the latest tech products and accessories. Quality products at affordable prices.</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" class="social-icon facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://x.com/" class="social-icon twitter"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/" class="social-icon instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com/" class="social-icon youtube"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://www.linkedin.com/" class="social-icon linkedin"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-6 footer-column">
+                <h5>Shop</h5>
+                <ul class="footer-links">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Deals & Promotions</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Weekly Specials</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-2 col-md-6 footer-column">
+                <h5>Support</h5>
+                <ul class="footer-links">
+                    <li><a href="product-detail.html">Contact Us</a></li>
+                    <li><a href="product-detail.html">FAQs</a></li>
+                    <li><a href="product-detail.html">Shipping Policy</a></li>
+                    <li><a href="product-detail.html">Returns & Exchanges</a></li>
+                    <li><a href="product-detail.html">Track Order</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 footer-column">
+                <h5>Newsletter</h5>
+                <p>Subscribe to get updates on new products, special offers and tech tips.</p>
+                
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                
+                <h5 class="mt-4">We Accept</h5>
+                <div class="payment-methods">
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="American Express"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="PayPal"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/825/825486.png" alt="Apple Pay"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/2504/2504889.png" alt="Google Pay"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 TechGadgets. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p class="mt-2">24/7 Customer Support: 1-800-TECH-GAD | support@techgadgets.com</p>
+        </div>
+    </div>
+</footer>
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script>
+    $(document).ready(function() {
+        initCartFunctionality();
+    });
+</script>
+</body>
+</html>

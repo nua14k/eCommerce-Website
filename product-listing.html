@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - TechGadgets</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white shadow-sm">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="logo">TechGadgets</a>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                         <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="product-listing.html">Products</a></li>
+                            <li class="nav-item"><a class="nav-link" href="product-detail.html">Categories</a></li>
+                            <li class="nav-item"><a class="nav-link" href="cart.html"><i class='bx bx-cart'></i> Cart <span id="cart-count" class="badge badge-light">0</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Section -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-12">
+                <div class="d-flex justify-content-between">
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3" style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="#"> Free Shipping on Orders Over $50</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="#"> Holiday Sale: Up to 40% Off Select Items</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="#"> New Arrivals: Cutting-Edge Tech Gadgets</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="#"> Member Exclusive: Extra 10% Off</a></div>
+                    </div>
+                    <!-- Custom Navigation Buttons -->
+                    <div class="carousel-controls">
+                        <button class="carousel-prev btn btn-primary ml-2">Prev</button>
+                        <button class="carousel-next btn btn-primary ml-2">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">All Products</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Product Listing Section -->
+    <section class="product-listing container-fluid" id="products">
+        <div class="container">
+            <div class="row">
+                <!-- Filters Column -->
+                <div class="col-md-3 filters">
+                    <div class="filter-section mb-4">
+                        <h4>Categories</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="category-link text-dark" data-category="all">All Products</a></li>
+                            <li><a href="#" class="category-link text-dark" data-category="smartphones">Smartphones</a></li>
+                            <li><a href="#" class="category-link text-dark" data-category="laptops">Laptops</a></li>
+                            <li><a href="#" class="category-link text-dark" data-category="tablets">Tablets</a></li>
+                            <li><a href="#" class="category-link text-dark" data-category="wearables">Wearables</a></li>
+                            <li><a href="#" class="category-link text-dark" data-category="audio">Audio</a></li>
+                            <li><a href="#" class="category-link text-dark" data-category="smart-home">Smart Home</a></li>
+                            <li><a href="#" class="category-link text-dark" data-category="accessories">Accessories</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section mb-4">
+                        <h4>Price Range</h4>
+                        <div class="price-range">
+                            <input type="range" class="form-range" min="0" max="2000" step="50" id="priceRange">
+                            <div class="d-flex justify-content-between">
+                                <span>$0</span>
+                                <span>$2000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+<div class="filter-section mb-4">
+    <h4>Brands</h4>
+    <div class="custom-filter-group">
+        <div class="custom-filter" data-brand="TechMaster">TechMaster</div>
+        <div class="custom-filter" data-brand="Quantum">Quantum</div>
+        <div class="custom-filter" data-brand="Nexus">Nexus</div>
+        <div class="custom-filter" data-brand="Aurora">Aurora</div>
+    </div>
+</div>
+
+<div class="filter-section mb-4">
+    <h4>Ratings</h4>
+    <div class="custom-filter-group">
+        <div class="custom-filter" data-rating="5">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <div class="custom-filter" data-rating="4">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bx-star'></i>
+        </div>
+        <div class="custom-filter" data-rating="3">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bx-star'></i>
+            <i class='bx bx-star'></i>
+        </div>
+    </div>
+</div>
+                </div>
+                
+                <!-- Products Column -->
+                <div class="col-md-9">
+                    <div class="sorting-options mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="mr-2">Sort by:</span>
+                                <select class="form-select form-select-sm" id="sort-options" style="width: auto; display: inline-block;">
+                                    <option value="featured" selected>Featured</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="rating">Customer Rating</option>
+                                    <option value="newest">Newest Arrivals</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span id="showing-count">Showing 1-12 of 48 products</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" id="product-container">
+                        <!-- Products will be loaded here dynamically -->
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center" id="pagination">
+                            <!-- Pagination will be loaded here dynamically -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Carousel -->
+    <div class="container-fluid py-3 bg-primary"> 
+        <p>You Might Also Like</p>
+        <div class="container position-relative">
+            <div class="owl-carousel owl-carousel-2 carousel-item-3">
+                <div class="item">
+                    <img src="imgs/related1.jpg" alt="Wireless Charger" style="width: 80px; height: 80px; object-fit: contain;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="product-listing.html">Fast Wireless Charger - $39.99</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imgs/related2.jpg" alt="Bluetooth Speaker" style="width: 80px; height: 80px; object-fit: contain;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="product-listing.html">Portable Bluetooth Speaker - $79.99</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imgs/related3.jpg" alt="Power Bank" style="width: 80px; height: 80px; object-fit: contain;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="product-listing.html">20,000mAh Power Bank - $49.99</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imgs/related4.jpg" alt="Smart Light Bulb" style="width: 80px; height: 80px; object-fit: contain;">
+                    <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
+                        <a class="text-secondary font-weight-semi-bold" href="product-listing.html">Color Smart Light Bulb - $29.99</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Custom Navigation Buttons for Top News Slider -->
+            <div class="top-news-carousel-controls">
+                <button class="top-news-prev btn">Prev</button>
+                <button class="top-news-next btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-decoration circle"></div>
+    <div class="footer-decoration square"></div>
+    
+    <div class="container footer-container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 footer-column">
+                <div class="footer-logo">Tech<span>Gadgets</span></div>
+                <p>Your one-stop shop for the latest tech products and accessories. Quality products at affordable prices.</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" class="social-icon facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://x.com/" class="social-icon twitter"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/" class="social-icon instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com/" class="social-icon youtube"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://www.linkedin.com/" class="social-icon linkedin"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-6 footer-column">
+                <h5>Shop</h5>
+                <ul class="footer-links">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Deals & Promotions</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Weekly Specials</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-2 col-md-6 footer-column">
+                <h5>Support</h5>
+                <ul class="footer-links">
+                    <li><a href="product-detail.html">Contact Us</a></li>
+                    <li><a href="product-detail.html">FAQs</a></li>
+                    <li><a href="product-detail.html">Shipping Policy</a></li>
+                    <li><a href="product-detail.html">Returns & Exchanges</a></li>
+                    <li><a href="product-detail.html">Track Order</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 footer-column">
+                <h5>Newsletter</h5>
+                <p>Subscribe to get updates on new products, special offers and tech tips.</p>
+                
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                
+                <h5 class="mt-4">We Accept</h5>
+                <div class="payment-methods">
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="American Express"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="PayPal"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/825/825486.png" alt="Apple Pay"></div>
+                    <div class="payment-method"><img src="https://cdn-icons-png.flaticon.com/512/2504/2504889.png" alt="Google Pay"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 TechGadgets. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p class="mt-2">24/7 Customer Support: 1-800-TECH-GAD | support@techgadgets.com</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+     <script src="js/script.js"></script>
+     <script>
+    $(document).ready(function() {
+        initCartFunctionality();
+    });
+</script>
+</body>
+</html>
