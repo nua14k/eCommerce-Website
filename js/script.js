@@ -1,11 +1,12 @@
 $(document).ready(function() {
     // Initialize all carousels
     function initCarousels() {
-        // Main carousel 1
+        // Main carousel 1 - Enhanced with nav arrows and smartSpeed
         $('.owl-carousel-1').owlCarousel({
             loop: true,
             margin: 10,
             autoplay: true,
+            smartSpeed: 1500,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
             responsive: {
@@ -15,14 +16,13 @@ $(document).ready(function() {
             }
         });
 
-        // Trending carousel
+        // Trending carousel - Enhanced with nav arrows
         $(".tranding-carousel").owlCarousel({
             autoplay: true,
             smartSpeed: 2000,
             items: 1,
             dots: false,
             loop: true,
-            nav: false,
             responsive: {
                 0: { items: 1 },
                 576: { items: 1 },
@@ -30,42 +30,50 @@ $(document).ready(function() {
             }
         });
 
-        // Top news carousel
+        // Top news carousel - Enhanced with nav arrows and smartSpeed
         $(".owl-carousel-2").owlCarousel({
             items: 3,
             loop: true,
-            margin: 10,
+            margin: 30,
             autoplay: true,
+            smartSpeed: 1000,
             autoplayTimeout: 3000,
             autoplayHoverPause: true,
             responsive: {
                 0: { items: 1 },
+                576: { items: 1 },
                 768: { items: 2 },
                 992: { items: 3 }
             }
         });
 
-        // Categories carousel
+        // Categories carousel - Enhanced with nav arrows and smartSpeed
         $("#categories-carousel").owlCarousel({
             loop: true,
-            margin: 20,
-            nav: true,
+            margin: 30,
+            smartSpeed: 1200,
             responsive: {
                 0: { items: 1 },
-                600: { items: 2 },
-                1000: { items: 4 }
+                576: { items: 1 },
+                768: { items: 2 },
+                992: { items: 4 }
             }
         });
 
-        // Featured carousel
+        // Featured carousel - Enhanced with nav arrows and smartSpeed
         $('.featured-carousel').owlCarousel({
             loop: true,
             margin: 10,
             nav: true,
             dots: true,
             autoplay: true,
+            smartSpeed: 1500,
             autoplayTimeout: 5000,
             autoplayHoverPause: true,
+            navText: [
+                '<i class="fa fa-angle-left" aria-="true"></i>«',
+                '»<i class="fa fa-angle-right" aria-hidden="true"></i>'
+            ],
             responsive: {
                 0: { items: 1 },
                 600: { items: 1 },
@@ -73,14 +81,21 @@ $(document).ready(function() {
             }
         });
 
-        // Generic carousel
-        $('.owl-carousel').not('.owl-carousel-1, .owl-carousel-2, .tranding-carousel, #categories-carousel, .featured-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            items: 1
-        });
     }
+
+    // Back to top button from sample code
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    
+    $('.back-to-top').click(function() {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
 
     // Initialize carousel navigation
     function initCarouselNavigation() {
@@ -159,43 +174,11 @@ $(document).ready(function() {
             sendButton.prop('disabled', !isFormValid);
         });
 
-        // Contact form submission
-        contactForm.on('submit', function(event) {
-            event.preventDefault();
-            contactForm.find('.error').removeClass('error');
-
-            if (!validateForm(contactForm)) {
-                highlightErrors(contactForm);
-                return;
-            }
-
-            setTimeout(function() {
-                location.reload();
-            }, 2000);
-        });
-
-        // Other forms submission
-        $('form').not('#contact-form').each(function() {
-            $(this).on('submit', function(event) {
-                event.preventDefault();
-                $(this).find('.error').removeClass('error');
-
-                if (!validateForm($(this))) {
-                    highlightErrors($(this));
-                    return;
-                }
-
-                setTimeout(function() {
-                    location.reload();
-                }, 2000);
-            });
-        });
     }
 
     // Product listing functionality
     function initProductListing() {
-        // MARK: Add your products array here (remove the example array below)
-       const products = [
+        const products = [
             { id: 1, name: "TechMaster Pro Phone", price: 899.99, oldPrice: 999.99, rating: 4.5, reviews: 128, category: "smartphones", brand: "TechMaster", image: "imgs/product1.jpg", badge: "Sale", badgeClass: "bg-danger", dateAdded: "2023-10-15" , class:"product-card" },
             { id: 2, name: "Quantum Ultra Laptop", price: 1290, oldPrice: null, rating: 5, reviews: 87, category: "laptops", brand: "Quantum", image: "imgs/product2.jpg", badge: "New", badgeClass: "bg-success", dateAdded: "2023-11-20" ,class:"product-card"},
             { id: 3, name: "Nexus Smart Watch", price: 249.99, oldPrice: 299.99, rating: 5, reviews: 215, category: "wearables", brand: "Nexus", image: "imgs/product3.jpg", badge: null, badgeClass: "", dateAdded: "2023-09-05",class:"product-card" },
@@ -235,6 +218,7 @@ $(document).ready(function() {
             { id: 37, name: "Premium Tablet", price: 499.99, oldPrice: 599.99, rating: 4.4, reviews: 142, category: "tablets", brand: "TechMaster", image: "imgs/tablet.jpg", badge: "Sale", badgeClass: "bg-danger", dateAdded: "2023-10-25",class:"product-card" },
             { id: 38, name: "Smart Speaker", price: 129.99, oldPrice: 159.99, rating: 4.2, reviews: 98, category: "smart-home", brand: "Quantum", image: "imgs/speaker.jpg", badge: "New", badgeClass: "bg-danger", dateAdded: "2023-12-10",class:"product-card" }
         ];
+
 
         // Pagination variables
         let currentPage = 1;
@@ -346,8 +330,7 @@ $(document).ready(function() {
                 case "newest":
                     filteredProducts.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
                     break;
-                default: // "featured"
-                    // Keep original order or apply some featured logic
+                default: 
                     break;
             }
         }
@@ -500,71 +483,72 @@ $(document).ready(function() {
     }
      
     // Image slider functionality
-function initImageSlider() {
-    const slides = document.querySelectorAll('.main-slider .slide');
-    const thumbnails = document.querySelectorAll('.thumbnail-container .thumbnail');
-    let currentSlide = 0;
-    let slideInterval;
+    function initImageSlider() {
+        const slides = document.querySelectorAll('.main-slider .slide');
+        const thumbnails = document.querySelectorAll('.thumbnail-container .thumbnail');
+        let currentSlide = 0;
+        let slideInterval;
 
-    // Function to show a specific slide
-    function showSlide(index) {
-        // Hide all slides
-        slides.forEach(slide => {
-            slide.classList.remove('active');
-        });
-        
-        // Remove active class from all thumbnails
-        thumbnails.forEach(thumb => {
-            thumb.classList.remove('active');
-        });
-        
-        // Show the selected slide
-        slides[index].classList.add('active');
-        
-        // Activate the corresponding thumbnail
-        if (thumbnails[index]) {
-            thumbnails[index].classList.add('active');
+        // Function to show a specific slide
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all thumbnails
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            
+            // Show the selected slide
+            slides[index].classList.add('active');
+            
+            // Activate the corresponding thumbnail
+            if (thumbnails[index]) {
+                thumbnails[index].classList.add('active');
+            }
+            
+            currentSlide = index;
         }
-        
-        currentSlide = index;
-    }
 
-    // Function to go to next slide
-    function nextSlide() {
-        let newIndex = (currentSlide + 1) % slides.length;
-        showSlide(newIndex);
-    }
+        // Function to go to next slide
+        function nextSlide() {
+            let newIndex = (currentSlide + 1) % slides.length;
+            showSlide(newIndex);
+        }
 
-    // Function to start auto sliding
-    function startSlideShow() {
-        slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
-    }
+        // Function to start auto sliding
+        function startSlideShow() {
+            slideInterval = setInterval(nextSlide, 3000); 
+        }
 
-    // Function to stop auto sliding
-    function stopSlideShow() {
-        clearInterval(slideInterval);
-    }
+        // Function to stop auto sliding
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
 
-    // Add click event to thumbnails
-    thumbnails.forEach((thumbnail, index) => {
-        thumbnail.addEventListener('click', () => {
-            stopSlideShow();
-            showSlide(index);
-            startSlideShow();
+        // Add click event to thumbnails
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                stopSlideShow();
+                showSlide(index);
+                startSlideShow();
+            });
         });
-    });
 
-    // Initialize the slider
-    showSlide(0);
-    startSlideShow();
+        // Initialize the slider
+        showSlide(0);
+        startSlideShow();
 
-    // Pause on hover (optional)
-    const sliderContainer = document.querySelector('.main-slider');
-    if (sliderContainer) {
-        sliderContainer.addEventListener('mouseenter', stopSlideShow);
-        sliderContainer.addEventListener('mouseleave', startSlideShow);
+        // Pause on hover (optional)
+        const sliderContainer = document.querySelector('.main-slider');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', stopSlideShow);
+            sliderContainer.addEventListener('mouseleave', startSlideShow);
+        }
     }
-}
+
     // Initialize all functionality
     initCarousels();
     initCarouselNavigation();
@@ -699,7 +683,7 @@ function initCartFunctionality() {
         const productCard = $(this).closest('.product-card');
         
         // Get product details from data attributes
-        const productId = productCard.find('img').attr('src').split('/').pop().split('.')[0]; // Use image filename as ID
+        const productId = productCard.find('img').attr('src').split('/').pop().split('.')[0]; 
         const productName = productCard.find('h3').text();
         const productPrice = parseFloat(productCard.find('.price').text().replace('$', '').split(' ')[0]);
         const productImage = productCard.find('img').attr('src');
